@@ -1,10 +1,23 @@
+html {
+	font-size: 16px;
+}
+
 body {
+    font-size: 1em;
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
 }
 
 .container{
 	max-width: 1200px;
 	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap; 
 }
 
 h1,
@@ -16,42 +29,43 @@ h4 {
 	font-weight: 700;
 }
 h1 {
-	font-size: 30px;
+	font-size: 1.875em;
 }
 h2 {
-    font-size: 24px;
+    font-size: 1.5em;
 }
 h3 {
-	font-size: 18px;
+	font-size: 1.125em;
 }
 h4 {
-	font-size: 12px;
+	font-size: 0.75em;
 }
 
 p {
-	font-size: 14px;
+	font-size: 0.875em;
 	line-height: 21px;
     padding: 0 30px;
 }
 
 /*The widths are in a percentage!*/
 header {
-	height: 110px;
 	border-bottom: 3px solid #77a466;
 	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: row wrap;
+	width: 100%;
 }
 
 header h1 {
-	float: left;
 	margin: 0;
 	padding: 38px 0;
 }
 header h1 span {
 	color: #77a466;
 }
-
 header nav {
-	float: right;
 	padding: 46px 0;
 }
 header nav ul {
@@ -61,7 +75,7 @@ header nav ul {
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
-	font-size: 14px;
+	font-size: 0.875em;
 	padding: 0 10px;
 	display: inline;
 }
@@ -74,13 +88,22 @@ header nav ul li a{
 .top-section,
 .bottom-section {
 	margin: 0 auto;
-	clear: both;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+}
+
+.bottom-section {
+	display: flex;
+	align-items: baseline;
+	flex-flow: row;
 }
 
 .main-image {
 	height: auto;
-	float: left;
 }
+
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
@@ -88,16 +111,17 @@ header nav ul li a{
 
 .main-title {
 	height: auto;
-	float: left;
 }
+
 .main-title h3 {
 	text-align: left;
 	padding: 5px 0;
 	color: #77a466;
 }
+
 .main-title p {
 	padding: 0;
-	font-size: 16px;
+	font-size: 1em;
 	line-height: 25px;
 }
 
@@ -106,7 +130,6 @@ header nav ul li a{
 .section-three {
 	width: 33%;
 	height: auto;
-	float: left;
 	border-top: 1px solid #eee;
 }
 
@@ -135,26 +158,143 @@ header nav ul li a{
 
 .reviews {
 	color: #333;
-	font-size: 16px;
+	font-size: 1em;
 	line-height: 21px;
 }
 
 .address {
-	font-size: 16px;
+	font-size: 1em;
 	line-height: 24px;
 }
 
 /*The widths are in a percentage!*/
 footer {
-	height: 50px;
 	border-top: 3px solid #eee;
 	margin: 0 auto;
-	clear: both;
 	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	width: 100%;
 }
+
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
-	font-size: 14px;
+	font-size: 0.875em;
+}
+
+@media (max-width: 767px) {
+	body {
+		padding: 17px;
+	}
+
+	header h1 {
+		border-bottom: 3px solid #77a466;
+		font-size: 1.5em;
+		padding: 17px 0;
+		text-align: center;
+		width: 100%;
+	}
+
+	header nav {
+		padding: 12px;
+		width: 100%;
+	}
+
+	header nav ul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column wrap;
+	}
+
+	header nav ul li {
+		font-size: .75em;
+		margin: 14px;
+	}
+
+	.main-title h3 {
+		font-size: .95em;
+	}
+
+	.main-title p {
+		font-size: .85em;
+	}
+
+	.bottom-section {
+		flex-flow: column wrap;
+	}
+
+	.section-one,
+	.section-two,
+	.section-three {
+		font-size: .85em;
+		width: 100%;
+	}
+
+	.section-two {
+		border-style: none;
+	}
+
+	.section-two h4,
+	.section-three h4 {
+		padding: 10px 0;
+	}
+	.section-two p,
+	.section-three p {
+		padding: 0;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+	body {
+		padding: 40px;
+	}
+
+	header h1 {
+		border-bottom: 3px solid #77a466;
+		font-size: 1.75em;
+		padding: 17px 0;
+		text-align: center;
+		width: 100%;
+	}
+
+	header nav {
+		padding: 12px;
+		width: 100%;
+	}
+
+	header nav ul {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-flow: row wrap;
+	}
+
+	header nav ul li {
+		display: flex;
+		margin: 14px 0;
+	}
+
+	.bottom-section {
+		display: flex;
+		align-items: baseline;
+		flex-flow: row;
+	}
+
+	.section-one {
+		width: 30%;
+	}
+
+	.section-two {
+		width: 37%;
+	}
+
+	.section-three {
+		width: 33%;
+	}
 }
